@@ -1,0 +1,343 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./admin.css">
+
+</head>
+<body onload="loaddata()">
+  <div class="topbar">
+    <div class="title">BVM LIBRARY</div>
+    <div class="hamburger"></div>
+  </div>
+   <div class="content">
+        <div class="menu">
+            <div class="user">
+                  <div class="logo">
+                  </div>
+                  <div class="name">
+                    Arshil
+                  </div>
+            </div>
+            <div class="heading">
+              Admin
+            </div>
+            <ul class="menu_items">
+              <li id="dashmenu" onclick="gotodash()" class="active">Dashboard</li>
+              <li id="bookmenu" onclick="gotobook()" >Books</li>
+              <li id="studmenu" onclick="gotostud()">Students</li>
+              <li id="issuemenu" onclick="gotoissue()">Books Report</li>
+            </ul>
+        </div>
+        <div id="dashboard">
+             <div class="header">
+               Admin Dashboard
+             </div>
+             <br>
+             <div class="userinfo">
+               <div class="heading" style="color:black ; font-size: 28px; padding: 0px; font-weight: bold;">
+                 About Me
+               </div>
+               <div class="profile">
+                    <div>
+                      <i class="large material-icons">account_circle</i>
+                    </div>
+                      <div class="name" style="color:black">
+                      <b>Arshil</b><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      </div>
+                </div>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>Id:</td>
+                    <td id="adminid"></td>
+                  </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td id="adminname"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td id="admingender"></td>
+                    </tr>
+                    <tr>
+                        <td>E-Mail:</td>
+                        <td id="adminmail">jessiarose@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td id="adminphone">+ 88 9856418</td>
+                    </tr>
+                </tbody>
+            </table>
+             </div>
+             <!-- <div class="libraryinfo">
+              <div class="students box">
+                <div class="item-icon" style="background-color: rgb(230, 208, 230);">
+                  <i class="bi bi-people" style="font-size: 50px;color:rgb(233, 80, 233); "></i>
+                </div>
+                <div class="item-info"> 
+                    <div class="item-name">
+                      Students
+                      </div>
+                      <div class="item-count">
+                          10
+                      </div>
+                </div>
+                <div class="morebook moreinfo" style="background-color: rgb(230, 208, 230);">
+                  More Information <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+              <div class="book box">
+                <div class="item-icon" style="background: rgb(203, 203, 247);">
+                  <i class="bi bi-book" style="font-size: 50px;color:rgb(149, 149, 238)"></i>
+                </div>
+                <div class="item-info"> 
+                      <div class="item-name">
+                          Books
+                      </div>
+                      <div class="item-count">
+                          12
+                      </div>
+                </div>
+                 <div class="morebook moreinfo" style="background-color: rgb(203, 203, 247);">
+                  More Information <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+              <div class="issued box">
+                <div class="item-icon" style="background:rgb(245, 154, 154);">
+                  <i class="bi bi-arrow-down-circle" style="font-size: 50px;color:rgb(247, 105, 105); "></i>
+                </div>
+                <div class="item-info"> 
+                  <div class="item-name">
+                    Issued
+                  </div>
+                  <div class="item-count">
+                      12
+                  </div>
+                </div>
+                <div class="morebook moreinfo" style="background-color: rgb(245, 154, 154);">
+                  More Information <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+              <div class="notreturned box">
+                <div class="item-icon" style="background:rgb(179, 252, 145)">
+                  <i class="bi bi-arrow-return-left" style="font-size: 50px;color:rgb(45, 255, 73);"></i>
+                </div>
+                <div class="item-info"> 
+                    <div class="item-name">
+                      Return
+                    </div>
+                    <div class="item-count">
+                        12
+                    </div>
+                </div>
+                <div class="morebook moreinfo" style="background-color: rgb(179, 252, 145);">
+                  More Information <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+             </div> -->
+        </div>
+        <div id="book">
+          <div class="header">
+            Books
+          </div>
+          <div class="booksdata">
+            <div class="header">
+              <p>All Books Data</p>
+              <button class="button" onclick="openbook()">
+                      Add
+              </button>
+            </div>
+            <table id="booktable" class="datatable" border="2px" rules="rows" frame="vside">
+            </table>
+          </div>
+        </div>
+        <div id="student">
+          <div class="header">
+            Students
+          </div>
+          <div class="booksdata">
+            <div class="header">
+              <p>All Students Data</p>
+              <button class="button" onclick="openstudent()">
+                Add
+              </button>
+            </div>
+            <table id="studenttable" class="datatable" border="2px" rules="rows" frame="vside">
+            </table>
+          </div>
+        </div>
+        <div id="issue" >
+          <div class="header">
+            Report
+          </div>
+          <div class="booksdata">
+            <div class="header">
+              <p>All Books Report</p>
+              <button class="button" onclick="openissue()">
+                Issue Book
+              </button>
+            </div>
+            <table id="reporttable" class="datatable" border="2px" rules="rows" frame="vside">
+              <tr>
+                
+              </tr>            
+         </table>
+          </div>
+        </div>
+   </div>
+
+   <div id="addbook">
+      <div class="form">
+        <div class="header" style="padding: 10px;">
+          <p>Add New Book</p>
+          <div>
+            <button class="button" style="height: 100%;" onclick="searchbook()">
+              Search
+            </button>
+            <button class="button" onclick="savebook()" style="height:100%;">
+              Save
+            </button>
+            <button class="button" onclick="closebook()" style="height:100%;">
+              Cancle
+            </button>
+          </div>
+        </div>
+        <table class="datatable" style="border:none;">
+                 <tr>
+                   <td>Book Name:</td>
+                   <td><input type="text" id="bookname"></td>
+                 </tr>
+                 <tr>
+                  <td>Book Id:</th>
+                  <td><input type="text" id="bookid"></td>
+                </tr>                 
+                <tr>
+                  <td>ISBN:</td>
+                  <td><input type="text" id="isbn"></td>
+                </tr>                 
+                <tr>
+                  <td>Author:</td>
+                  <td><input type="text" id="author"></td>
+                </tr>                 
+                <tr>
+                  <td>Publisher:</td>
+                  <td><input type="text" id="publisher"></td>
+                </tr>
+                <tr>
+                  <td>Edition:</td>
+                  <td><input type="number" id="edition"></td>
+                </tr>
+                <tr>
+                  <td>Pages:</td>
+                  <td><input type="number" id="pages"></td>
+                </tr>
+                <tr>
+                  <td>Quantity:</td>
+                  <td><input type="number" id="quantity"></td>
+                </tr>
+               </table>
+      </div>
+   </div>
+   <div id="addstudent">
+    <div class="form">
+      <div class="header" style="padding: 10px;">
+        <p>Add New Student</p>
+        <div>
+          <button class="button" onclick="savestudent()" style="height:100%;">
+            Save
+          </button>
+          <button class="button" onclick="closestudent()" style="height:100%;">
+            Cancle
+          </button>
+        </div>
+      </div>
+      <table class="datatable" style="border:none;">
+               <tr>
+                 <td>Student Name:</td>
+                 <td><input type="text" id="studentname"></td>
+               </tr>
+               <tr>
+                <td>Studnet Id:</th>
+                <td><input type="text" id="studentid"></td>
+              </tr>                 
+              <tr>
+                <td>Email:</td>
+                <td><input type="text" id="studentemail"></td>
+              </tr>                 
+              <tr>
+                <td>Phone:</td>
+                <td><input type="text" id="studentphone"></td>
+              </tr>                 
+              <tr>
+                <td>Gender:</td>
+                <td><input type="text" id="studentgender"></td>
+              </tr>
+              <tr>
+                <td>Department:</td>
+                <td><input type="text" id="studentdepartment"></td>
+              </tr>
+              <tr>
+                <td>Semester:</td>
+                <td><input type="number" id="studentsemester"></td>
+              </tr>
+              <tr>
+                <td>Division</td>
+                <td><input type="number" id="studentdivision"></td>
+              </tr>
+             </table>
+    </div>
+ </div>
+ <div id="issuebook">
+  <div class="form">
+    <div class="header" style="padding: 10px;">
+      <p>Issue Book To Student</p>
+      <div>
+        <button class="button" onclick="issue()" style="height:100%;">
+          Issue
+        </button>
+        <button class="button" onclick="closeissue()" style="height:100%;">
+          Cancle
+        </button>
+      </div>
+    </div>
+    <table class="datatable" style="border:none;">
+            <tr>
+              <td>Studnet Id:</th>
+              <td><input type="text" id="sid"></td>
+            </tr>    
+            <tr>
+              <td>Studnet Name:</th>
+              <td><input type="text" id="sname"></td>
+            </tr>              
+            <tr>
+              <td>Book Id:</td>
+              <td><input type="text" id="bid"></td>
+            </tr>                 
+            <tr>
+              <td>Book Name:</th>
+              <td><input type="text" id="bname"></td>
+            </tr> 
+            <tr>
+              <td>Date:</td>
+              <td><input type="text" id="currentdate" readonly></td>
+            </tr>                 
+            <tr>
+              <td>Number Of Days</td>
+              <td><input type="text" id="days"></td>
+            </tr>
+            <tr>
+              <td><button onclick="search()">Search </button></th>
+            </tr> 
+           </table>
+  </div>
+</div>
+  <script src="./main.js"></script>
+</body>
+</html>

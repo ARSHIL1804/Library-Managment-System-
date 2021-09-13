@@ -1,0 +1,110 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.home{
+  display:flex;
+  align-items: center;
+}
+nav{
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  background: transparent;
+  justify-content: space-between;
+  background-color: rgba(73, 234, 255, 0.651);
+}
+nav ul{
+  display: inline-block;
+  padding-right:20px ;
+}
+li{
+  display: inline-block;
+  padding: 10px;
+}
+a{
+  color:white;
+}
+.images{
+  width: 100vw;
+  height: 100vh;
+}
+.section{
+  width: 100vw;
+  display: flex;
+}
+#signin_form_container{
+  width: 40%;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:30px 0px 30px 0px;
+}
+.material-icons
+{
+  font-size:50px ;
+}
+.login_form{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.login_form>input:not(input[type=submit]){
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 80%;
+  font-size:24px;
+  color: black;
+  border: none;
+}
+.login_form > input:focus{
+ outline: none;
+
+}
+.login_form > input[type=submit]{
+  width:80%;
+  height: 15%;
+  font-size: 24px;
+  color: black;
+  background: rgb(0, 181, 204);
+  cursor: pointer;
+  margin-top:30px ;
+}
+.line{
+  width: 80%;
+  height:2px;
+  background-color: black;
+}
+.usertype{
+  width: 80%;
+  margin-top: 8px;
+  font-size: 24px;
+}
+#user{
+  line-height: 18px;
+  font-size: 20px;
+}
+.reader{
+  width:60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
+  row-gap: 20px;
+}
+.reader h1{
+  color:orange;
+  font-size: 50px;
+}
+.reader p{
+  font-size: 20px;
+}

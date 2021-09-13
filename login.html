@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+        BVM LIBRARY 
+    </title>
+    <link rel="stylesheet" href="login.css">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  </head>
+  <body>
+   <nav >
+      <div class="home">
+        <a href="#" style="text-decoration: none; margin-left: 20px; font-size: larger; ;">BVM LIBRARY</a>
+      </div>
+      <ul>
+               <li>
+                    <a href="#signin_form_container" style="text-decoration: none; margin-left: 20px; font-size: larger;">Sign in</a>
+             </li>
+              <li>
+                  <a href="#" style="text-decoration: none; margin-left: 20px; font-size: larger;">About Us</a>
+              </li>
+              <li>
+                  <a href="#" style="text-decoration: none; margin-left: 20px; font-size: larger;">Contact Us</a>
+              </li>
+      </ul>
+    </nav> 
+    <div class="images">
+      <img src="book.jpg"
+      width="100%" height="100%" />
+    </div>
+    <div class="section">
+      <div  id="signin_form_container">
+        <div class="material-icons">
+                Signin
+        </div>
+        <div method="GET" id="signin" class="login_form">
+            <input type="text" id="signin_id" placeholder="Enter Your Id" autoComplete="Off" id="id"></input>
+            <span class="line"></span>
+            <input type="password"  id="signin_password" placeholder="Password" autoComplete="Off"></input>
+            <span class="line"></span>
+           <div class="usertype">
+              <label>User Type:</label>
+              <select name="type" id="user" form="signin">
+                <option value="Admin" selected>Admin</option>
+              </select>
+           </div>
+            <input type="submit" value="Submit" onclick="SigninValidation()"></input>
+          </div>
+      </div>
+      <div class="reader">
+        <h1>Hello readers,</h1>
+        <p>
+          The only thing that you absolutely have to know, is the location of the library.
+        </p>
+      </div>
+    </div>
+    <script src="./login.js"></script>
+  </body>  
+</html>

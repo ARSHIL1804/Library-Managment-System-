@@ -1,0 +1,278 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.topbar{
+  width:100%;
+  height: 6%;  
+  background-color: rgb(255, 174, 23);
+  display: flex;
+  align-items: center;
+}
+.title{
+  box-sizing: border-box;
+  color:white;
+  font-weight: bold;
+  font-size:25px;
+  width:15%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.1);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  width:100%;
+  height:94%;
+  display: flex;
+}
+.menu{
+  height: 100%;
+  width:15%;
+  background-color:rgba(34, 34, 34, 0.9)
+}
+
+.user{
+  width:100%;
+  height: 10%;
+  display: flex;
+  align-items:center;
+  box-sizing: border-box;
+  padding-left: 20px;
+  background-color: rgba(255, 255, 255,0.09);
+}
+.logo{
+  width:60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+.name{
+  margin-left: 10px;
+  color:white;
+  font-size: 20px;
+}
+.heading{
+  width:100%;
+  height:5%;
+  background-color: rgba(0,0,0,0.0.09);
+  display: flex;
+  align-items: center;
+  padding-left:20px;
+  font-size: 18px;
+  color: wheat;
+  box-sizing: border-box;
+}
+.menu ul li{
+  width:100%;
+  height: 6%;
+  display: flex;
+  align-items:center;
+  padding-left:20px;
+  box-sizing: border-box;
+  color:white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.active,.menu ul li:hover{
+  background-color:rgba(0,0,0,0.1);
+}
+.active {
+  border-left: 3px solid orange;
+}
+#dashboard,#book,#student,#issue{
+  height:100%;
+  width: 85%;
+  background-color: rgba(206, 206, 206, 0.377);
+  padding:2rem 3rem 2rem 3rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-x:hidden;
+  row-gap:20px;
+}
+.profielcontent{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin-top: 30px;
+  width: 50%;
+  height: 70%;
+  padding:20px 0 0 20px;
+}
+.profielcontent label{
+  margin:15px;
+  font-size: 30px;
+}
+.box{
+  width:300px;
+  height:150px;
+  background-color: white;
+  padding:25px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: inline-flex;
+  margin: 10px;
+  justify-content: space-between;
+  position: relative;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+}
+.userinfo{
+  height:50%;
+  background-color: white;
+  padding:20px 0px 0px 30px ;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.table{ 
+  display: table;
+  width: 100%;
+  height: 50%;
+  font-size: 20px;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+}
+.profile{
+  width:100%;
+  height: 30%;
+  display: flex;
+  align-items:center;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255,0.09);
+  margin: 15px 0px 15px 0px;
+
+}
+.libraryinfo{
+  box-sizing:border-box;
+}
+
+.item-icon {
+  height: 85px;
+  width: 85px;
+  line-height: 85px;
+  border-radius: 50%;
+  text-align: center;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-name{
+   font-size: 30px;
+}
+.item-count{
+  font-size: 22px;
+  margin-top: 10px;
+  text-align: end;
+}
+.moreinfo{
+  position: absolute;
+  width: 100%;
+  height:20%;
+  left: 0;
+  bottom: 0;
+  background-color: thistle;
+  justify-content: center;
+  display:flex;
+  align-items: center;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  cursor: pointer;
+}
+.material-icons
+{
+  font-size:100px;
+  color: orange;
+}
+.header{
+  height: 50px;
+  font-size:25px;
+  font-weight:600;
+  display: flex;
+  justify-content: space-between;
+}
+#book,#student,#issue,#return{
+  display: none;
+}
+.booksdata{
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  overflow: auto;
+}
+.datatable{
+  margin-top:20px ;
+  border: 1px solid silver;
+  border-collapse: collapse;
+}
+.datatable tr{
+  height: 50px;
+}
+.datatable td{
+  width: 100px;
+}
+.datatable th,td{
+  padding-left: 10px;
+}
+.datatable tr:nth-child(even) td:first-child{
+  background-color: rgba(185, 185, 185, 0.219);
+}
+.datatable tr:hover:not(:first-child){
+  background-color: rgba(185, 185, 185, 0.219);
+}
+.button{
+  padding:0px 20px 0px 20px;
+  background-color: rgb(181, 255, 255);
+  outline: none;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#addbook,#addstudent,#issuebook{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display:none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0,0.5);
+  padding:10px;
+}
+.form{
+  background-color: white;
+  border-radius: 20px;
+  width:40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.form input{
+  width:25ch;
+  height:30px;
+  font-size: 20px;
+}
